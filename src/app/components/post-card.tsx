@@ -20,7 +20,7 @@ export default function PostCard({
     const [isFollowed, setIsFollowed] = useState(false);
 
     return (
-        <Card className="shadow-none bg-transparent hover:bg-slate-950 transition border-b border-white/20 rounded-none cursor-pointer">
+        <Card className="shadow-none bg-transparent hover:bg-gray-950 transition border-b border-white/20 rounded-none cursor-pointer">
             <CardHeader className="justify-between">
                 <div className="flex gap-x-2">
                     <Link href={`/${userName}`}>
