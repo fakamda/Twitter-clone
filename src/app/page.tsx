@@ -19,6 +19,7 @@ export default async function Home() {
   const { data: posts } = await supabase
     .from('posts')
     .select('*, user:users(name, avatar_url, user_name)') //esto es un join que lo hace automaticamente supabase detectando que con el user id popula el resto del objeto que tiene ese id
+    .order('created_at', { ascending: false })
   //para renombrar el nombre tambien se puede usar 2 puntos
   // como no permite crear triggers de tablas privadas en supabase ejecutamos este comando
   // create trigger on_auth_insert_users after insert on auth.users for each row execute function insert_user_in_public_table_for_new_user();
